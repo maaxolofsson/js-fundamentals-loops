@@ -42,9 +42,10 @@ for (let i = 1; i <= 10; ++i) {
   const toAdd = []
   for (let j = 1; j <= i; ++j) {
     const toAdd2 = []
-    for (let k = 1; k <= j; ++k) toAdd2.push(j)
+    for (let k = 1; k <= j; ++k) toAdd2.push(i)
     toAdd.push(toAdd2)
   }
+
   deepOne.push(toAdd)
 }
 
@@ -66,7 +67,9 @@ for (let i = 1; i <= 10; ++i) {
   const toAdd = []
   for (let j = 1; j <= i; ++j) {
     const toAdd2 = []
-    for (let k = 1; k <= j; ++k) toAdd2.push(k)
+    let sum = 0
+    for (let k = 1; k <= j; ++k) sum += k * k
+    toAdd2.push(sum / j)
     toAdd.push(toAdd2)
   }
   deepThree.push(toAdd)
